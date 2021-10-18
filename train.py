@@ -82,8 +82,8 @@ def main():
         print(clf)
 
         #Creating the model on Training Data
-        XGB=clf.fit(X_train,y_train)
-        prediction=XGB.predict(X_test)
+        clf.fit(X_train,y_train)
+        prediction=clf.predict(X_test)
 
         #Measuring accuracy on Testing Data
         loss = log_loss(y_test, prediction)
@@ -93,4 +93,5 @@ def main():
 
         # log metrics
         # mlflow.log_metrics({"log_loss": loss, "accuracy": acc})
+        mlflow.xgboost.log_model(clf,"xgboost_model")
 main()
