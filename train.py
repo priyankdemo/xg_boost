@@ -92,3 +92,4 @@ def main():
 
         # log metrics
         mlflow.log_metrics({"log_loss": loss, "accuracy": acc})
+main()
