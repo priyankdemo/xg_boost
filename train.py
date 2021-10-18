@@ -19,7 +19,7 @@ def parse_args():
     parser.add_argument(
         "--max_depth",
         type=int,
-        default=3.0,
+        default=3,
         help="subsample ratio of columns when constructing each tree (default: 3.0)",
     )
     parser.add_argument(
