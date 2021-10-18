@@ -5,7 +5,7 @@ API_ENDPOINT = "http://115.115.91.60:5432/train"
 # data to be sent to api
 data = {
 	"url": "https://github.com/priyankdemo/xg_boost",
-	"branch_name": "main",
+	"branch_name": "master",
 	"user_name": "priy@gmail.com"
 }
 # sending post request and saving response as response object
