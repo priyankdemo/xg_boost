@@ -4,9 +4,9 @@ import requests
 API_ENDPOINT = "http://115.115.91.60:5432/train"
 # data to be sent to api
 data = {
-	"url": "https://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@github.com/MJ410/classify-private",
+	"url": "https://github.com/priyankdemo/xg_boost",
 	"branch_name": "main",
-	"user_name": "jay@gmail.com"
+	"user_name": "priy@gmail.com"
 }
 # sending post request and saving response as response object
 r = requests.post(url = API_ENDPOINT, data = data)
