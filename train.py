@@ -93,5 +93,5 @@ def main():
 
         # log metrics
         # mlflow.log_metrics({"log_loss": loss, "accuracy": acc})
-        mlflow.xgboost.log_model(clf,"xgboost_model")
+        mlflow.sklearn.log_model(clf,"xgboost_model")
 main()
