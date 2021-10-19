@@ -1,4 +1,4 @@
-# importing the requests library
+# importing the requests libraries
 import requests
 # defining the api-endpoint
 API_ENDPOINT = "http://115.115.91.60:5432/train"
