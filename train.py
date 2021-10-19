@@ -6,6 +6,7 @@ from sklearn.metrics import accuracy_score, log_loss
 from xgboost import XGBClassifier
 import mlflow 
 import argparse
+from urllib.parse import urlparse
 
 def parse_args():
     #max_depth=3, learning_rate=0.1, n_estimators=500
@@ -93,5 +94,10 @@ def main():
 
         # log metrics
         mlflow.log_metrics({"log_loss": loss, "accuracy": acc})
-        mlflow.sklearn.log_model(clf,"xgboost_model")
+        
+        tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
+        if tracking_url_type_store != "file":
+            mlflow.sklearn.log_model(clf, "model", registered_model_name="xgboost")
+        else:
+            mlflow.sklearn.log_model(clf, "model", registered_model_name="xgboost")
 main()
