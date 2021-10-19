@@ -1,4 +1,4 @@
-name: private-classify-de
+name: private-classify-demo
 conda_env: conda.yaml
 entry_points:
   main:
