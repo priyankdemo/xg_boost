@@ -27,7 +27,7 @@ def parse_args():
         "--n_estimators",
         type=int,
         default=500,
-        help="subsample ratio of the training instances (default: 500)",
+        help="subs ample ratio of the training instances (default: 500)",
     )
     return parser.parse_args()
 
