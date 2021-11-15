@@ -1,4 +1,4 @@
-name: private-classify1-demo
+name: private-classif-demo
 channels:
   - conda-forge
 dependencies:
